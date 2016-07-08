@@ -1,3 +1,3 @@
 class Character < ActiveRecord::Base
-  has_many :backgrounds
+  has_one :background
 end

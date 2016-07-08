@@ -1,7 +1,10 @@
 <h1><%= @character.name %> </h1>
 
-<%= render partial: 'characters/background', collection: @character.backgrounds %>
-<%= render partial: 'backgrounds/form' %>
+<%= render partial: 'characters/background', object: @character.background %>
+
+<% if !@character.background %>
+  <%= render partial: 'backgrounds/form' %>
+<%end %>
 
 
 <%= link_to "<< Back to All Characters", characters_path %>

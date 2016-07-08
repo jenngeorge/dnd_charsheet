@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #get 'home/index'
   resources :characters do
-    resources :backgrounds
+    resource :backgrounds
   end
 
   root 'home#index'
