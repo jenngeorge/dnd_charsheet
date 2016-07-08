@@ -8,6 +8,9 @@ class CharactersController < ApplicationController
 
   def show
     @character = Character.find(params[:id])
+    
+    @background = Background.new
+    @background.character_id = @character.id
   end
 
   def new

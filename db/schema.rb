@@ -11,7 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160707224923) do
+ActiveRecord::Schema.define(version: 20160708200118) do
+
+  create_table "backgrounds", force: :cascade do |t|
+    t.string   "background_type"
+    t.string   "race"
+    t.string   "subrace"
+    t.string   "age"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "alignment"
+    t.text     "appearance"
+    t.integer  "character_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "backgrounds", ["character_id"], name: "index_backgrounds_on_character_id"
+
+  create_table "basics", force: :cascade do |t|
+    t.string   "background"
+    t.string   "race"
+    t.string   "subrace"
+    t.string   "age"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "alignment"
+    t.text     "appearance"
+    t.integer  "character_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "basics", ["character_id"], name: "index_basics_on_character_id"
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"

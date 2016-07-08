@@ -1,0 +1,34 @@
+<h3> Add Background </h3>
+<%= form_for [ @character, @background ] do |f| %>
+  <p>
+    <%= f.label :background_type, "Background"%><br/>
+    <%= f.text_field :background_type %>
+  </p>
+  <p>
+    <%= f.label :race %><br/>
+    <%= f.text_field :race %>
+  </p>
+  <p>
+    <%= f.label :subrace %><br/>
+    <%= f.text_field :subrace %>
+  </p>
+  <p>
+    <%= f.label :age %><br/>
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label :height %><br/>
+    <%= f.text_field :height %>
+  </p>
+  <p>
+    <%= f.label :alignment %><br/>
+    <%= f.text_field :alignment %>
+  </p>
+  <p>
+    <%= f.label :appearance %><br/>
+    <%= f.text_area :appearance %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

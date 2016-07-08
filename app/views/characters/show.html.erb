@@ -1,5 +1,9 @@
 <h1><%= @character.name %> </h1>
 
+<%= render partial: 'characters/background', collection: @character.backgrounds %>
+<%= render partial: 'backgrounds/form' %>
+
+
 <%= link_to "<< Back to All Characters", characters_path %>
 <%= link_to "delete", character_path(@character), method: :delete, data: {confirm: "Really delete the article?"} %>
 <%= link_to "edit", edit_character_path(@character) %>
