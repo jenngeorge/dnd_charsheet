@@ -1,14 +1,16 @@
-<%= form_for(@character) do |f| %>
-  <ul>
-  <% @character.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
+<div class="form0">
+  <%= form_for(@character) do |f| %>
+    <ul>
+    <% @character.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+    </ul>
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
   <% end %>
-  </ul>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+</div>
